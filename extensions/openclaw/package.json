@@ -1,0 +1,62 @@
+{
+	"name": "openclaw",
+	"displayName": "OpenClaw",
+	"description": "OpenClaw home screen, install wizard, configuration, and status panel",
+	"version": "0.2.2",
+	"publisher": "openclaw",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.85.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"configuration": {
+			"title": "OpenClaw",
+			"properties": {
+				"openclaw.cliPath": {
+					"type": "string",
+					"default": "",
+					"description": "Absolute path to the OpenClaw CLI (overrides auto-detection)."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "openclaw.home",
+				"title": "OpenClaw: Home"
+			},
+			{
+				"command": "openclaw.configure",
+				"title": "OpenClaw: Configure"
+			},
+			{
+				"command": "openclaw.install",
+				"title": "OpenClaw: Install"
+			},
+			{
+				"command": "openclaw.status",
+				"title": "OpenClaw: Status"
+			}
+		]
+	},
+	"scripts": {
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^20.19.35",
+		"@types/vscode": "^1.85.0",
+		"typescript": "^5.9.3"
+	},
+	"icon": "media/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/damoahdominic/occ.git"
+	}
+}
