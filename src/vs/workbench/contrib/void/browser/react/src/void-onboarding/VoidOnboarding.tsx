@@ -618,12 +618,7 @@ const VoidOnboardingContent = () => {
 			}
 		/>,
 
-		1: <OnboardingPageShell hasMaxWidth={false}
-			content={
-				<AddProvidersPage pageIndex={pageIndex} setPageIndex={setPageIndex} />
-			}
-		/>,
-		2: <OnboardingPageShell
+		1: <OnboardingPageShell
 
 			content={
 				<div>
